@@ -85,7 +85,7 @@ class _QrCodeCameraWebImplState extends State<QrCodeCameraWebImpl> {
       //Fallback
       try {
         html.window.navigator
-            .getUserMedia(video: {'facingMode': 'environment'}).then(
+            .getUserMedia(video: {'facingMode': 'user'}).then(
                 (html.MediaStream stream) {
           _stream = stream;
           _video.srcObject = stream;
