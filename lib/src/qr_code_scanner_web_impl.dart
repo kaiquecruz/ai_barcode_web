@@ -72,7 +72,7 @@ class _QrCodeCameraWebImplState extends State<QrCodeCameraWebImpl> {
     // Access the webcam stream
     try {
       html.window.navigator.mediaDevices?.getUserMedia({
-        'video': {'facingMode': 'environment'}
+        'video': {'facingMode': 'user'}
       }).then((html.MediaStream stream) {
         _stream = stream;
         _video.srcObject = stream;
